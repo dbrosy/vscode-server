@@ -6,7 +6,7 @@ services:
     restart: always
     stdin_open: true
     tty: true
-    command: --allow-http --no-auth
+    command: --allow-http # --no-auth
     ports:
       - "8443:8443"
     volumes:
