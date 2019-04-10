@@ -10,7 +10,7 @@ services:
     ports:
       - "8443:8443"
     volumes:
-      - ${PWD}/project:/home/coder/project
+      - ./project:/home/coder/project:rw
   onedrive:
     image: oznu/onedrive
     container_name: vscode-onedrive
@@ -23,4 +23,4 @@ services:
       - PUID=911
     volumes:
       - ./config:/config
-      - ${PWD}/project:/development/project/
+      - ./project:/development/project:rw
