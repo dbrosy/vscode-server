@@ -1,0 +1,27 @@
+version: "3"
+services:
+  vscode-server:
+    image: codercom/code-server:1.621
+    container_name: vscode-server
+    restart: always
+    stdin_open: true
+    tty: true
+    command: --allow-http # --no-auth
+    ports:
+      - "8443:8443"
+    volumes:
+      - ${PWD}/data:/home/coder/project
+  onedrive:
+    image: oznu/onedrive
+    container_name: vscode-onedrive
+    restart: always
+    depends_on:
+      - vscode-server
+    environment:
+      - TZ=Australia/Sydney
+      - PGID=1000
+      - PUID=1000
+      - DEBUG=1
+    volumes:
+      - ./config:/config
+      - ${PWD}/data:/documents/development/vscode
