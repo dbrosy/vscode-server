@@ -21,6 +21,7 @@ services:
       - TZ=Australia/Sydney
       - PGID=911
       - PUID=911
+      - DEBUG=1
     volumes:
       - ./config:/config
       - ${PWD}/project:/development/vscode
