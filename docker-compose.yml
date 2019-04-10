@@ -8,7 +8,7 @@ services:
     tty: true
     command: --allow-http --no-auth
     ports:
-      - "127.0.0.1:8443:8443"
+      - "8443:8443"
     volumes:
       - ${PWD}:/home/coder/project
     
