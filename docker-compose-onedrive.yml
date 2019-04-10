@@ -10,7 +10,7 @@ services:
     ports:
       - "8443:8443"
     volumes:
-      - ${PWD}/project:/home/coder/project
+      - ./home/coder/vscode:/home/coder/project
   onedrive:
     image: oznu/onedrive
     container_name: vscode-onedrive
@@ -19,9 +19,9 @@ services:
       - vscode-server
     environment:
       - TZ=Australia/Sydney
-      - PGID=911
-      - PUID=911
+      - PGID=1000
+      - PUID=1000
       - DEBUG=1
     volumes:
       - ./config:/config
-      - ${PWD}/project:/development/vscode
+      - ./home/coder/vscode:/development/vscode
