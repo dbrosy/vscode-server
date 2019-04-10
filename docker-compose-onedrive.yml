@@ -24,4 +24,4 @@ services:
       - DEBUG=1
     volumes:
       - ./config:/config
-      - /home/ubuntu/data:/development/vscode
+      - /home/ubuntu/data:/documents
