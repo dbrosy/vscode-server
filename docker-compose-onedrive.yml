@@ -10,7 +10,7 @@ services:
     ports:
       - "8443:8443"
     volumes:
-      - /home/ubuntu/vscode:/home/coder/project
+      - /home/ubuntu/data:/home/coder/project
   onedrive:
     image: oznu/onedrive
     container_name: vscode-onedrive
@@ -24,4 +24,4 @@ services:
       - DEBUG=1
     volumes:
       - ./config:/config
-      - /home/ubuntu/vscode:/development/vscode
+      - /home/ubuntu/data:/development/vscode
