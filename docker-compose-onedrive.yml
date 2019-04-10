@@ -10,7 +10,7 @@ services:
     ports:
       - "8443:8443"
     volumes:
-      - ./project:/home/coder/project:rw
+      - ${PWD}:/home/coder/project
   onedrive:
     image: oznu/onedrive
     container_name: vscode-onedrive
