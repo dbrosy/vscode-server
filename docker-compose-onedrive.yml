@@ -23,4 +23,4 @@ services:
       - PUID=911
     volumes:
       - ./config:/config
-      - ${PWD}:/development/vdcode
+      - ${PWD}:/development/vscode
